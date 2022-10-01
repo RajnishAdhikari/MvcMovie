@@ -17,14 +17,13 @@ namespace MvcMovie.Controllers
         //
         //GET: /Helloworld/Welcome/
 
-        public string Welcome(string name, int ID = 1)
+        public IActionResult Welcome(string name, int numTimes = 1)
         {
-            return HtmlEncoder.Default.Encode($"Hello {name}, ID is: {ID}");
-        }
+            ViewData["Message"] = "Hello" + name;
+            ViewData["NumTimes"] = numTimes;
 
-        public IActionResult Index()
-        {
             return View();
         }
+
     }
 }
