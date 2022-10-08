@@ -9,11 +9,12 @@ namespace MvcMovie.Models
         public string? Title { get; set; }
 
 
-        [Display(Name = "Release Date")]
+        [Display(Name = "Released Date")]
         [DataType(DataType.Date)]
-        public DateTime? ReleaseDate { get; set; }
+        public DateTime? ReleasedDate { get; set; }
         public string? Genre { get; set; }
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
+        public string? Rating { get; set; }
     }
 }
